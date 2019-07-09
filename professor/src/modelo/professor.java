@@ -51,4 +51,8 @@ private String endereco;
     public String toString() {
         return nome;
     }
+
+    public String getNome() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
