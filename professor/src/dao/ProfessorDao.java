@@ -3,23 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao; 
+package dao;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import modelo.professor;/**
+import modelo.Professor;
+/**
  *
  * @author Administrador
  */
 public class ProfessorDao {
-
-    /**
-     *
-     * @param objeto
-     * @return
-     */
-    public static boolean inserir (Professor objeto) {
-        String sql = "INSERT INTO Professor (nome, sobrenome, endereco) VALUES (?, ? , ?)";
+    public static boolean inserir(Professor objeto) {
+        String sql = "INSERT INTO professor (nome, sobrenome, endereco) VALUES (?, ?, ?)";
         try {
             PreparedStatement ps = conexao.Conexao.getConexao().prepareStatement(sql);
             ps.setString(1, objeto.getNome());
@@ -32,13 +27,11 @@ public class ProfessorDao {
             return false;
         }
     }
-    
-    
-    public static void main(String[] args) {
-        Professor objeto = new Professor();
-        objeto.setNome("BRUNO");
-        objeto.setSobrenome("Brasil");
-        objeto.setEndereco("Ibiruba");
+     public static void main(String[] args) {
+       Professor objeto = new Professor();
+        objeto.setNome("Iago");
+        objeto.setSobrenome("Mocelin");
+        objeto.setEndereco("Brasil");
         
         boolean resultado = inserir(objeto);
         if (resultado) {
@@ -48,6 +41,3 @@ public class ProfessorDao {
         }
     }
 }
-
-
-

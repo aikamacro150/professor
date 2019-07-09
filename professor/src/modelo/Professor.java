@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package professor;
+package modelo;
 
 /**
  *
@@ -49,9 +49,16 @@ public class Professor {
 
     @Override
     public String toString() {
-        return nome;
+        return "Professor{" + "nome=" + nome + '}';
     }
-    
-    
+
+    public void setnome(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setsobrenome(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 }
